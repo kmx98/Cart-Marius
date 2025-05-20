@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*Esto era el margen que te jodia pero con esto de abajo se arregla*/
+body { margin: 0; }

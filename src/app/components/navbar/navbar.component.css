@@ -1,0 +1,48 @@
+/* Elimina el margen por defecto del body y establece una fuente básica */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo para el contenedor del navbar: color de fondo oscuro y espacio interno */
+.navbar {
+  background-color: #333; /* gris oscuro */
+  padding: 15px 20px;     /* espacio interior arriba/abajo y a los lados */
+}
+
+/* Estilos para la lista de enlaces de navegación */
+.nav-links {
+  list-style: none; /* elimina los puntos de lista */
+  margin: 0;         /* elimina margen externo */
+  padding: 0;        /* elimina padding interno */
+  
+  display: flex;     /* alinea los elementos <li> en fila horizontal */
+  justify-content: center;   /* centra horizontalmente los elementos */
+  align-items: center;       /* centra verticalmente (opcional) */
+}
+
+/* Estilo para cada elemento de la lista */
+.nav-links li {
+  margin-right: 20px; /* espacio a la derecha de cada enlace */
+}
+
+/* Estilo básico para los enlaces */
+.nav-links a {
+  text-decoration: none; /* quita el subrayado */
+  color: white;          /* color del texto blanco */
+  padding: 8px 12px;     /* espacio interno en los enlaces */
+  transition: 0.3s;      /* suaviza la transición al hacer hover */
+}
+
+/* Estilo cuando el cursor pasa sobre un enlace */
+.nav-links a:hover {
+  background-color: #555; /* cambia el fondo a un gris más claro */
+  border-radius: 4px;     /* redondea ligeramente las esquinas del fondo */
+}
+
+/* .header-aux {
+    margin: 0 auto;
+    width: 100%;
+    max-width: calc(1200px + 40px);
+    padding: 0 20px;
+} */
