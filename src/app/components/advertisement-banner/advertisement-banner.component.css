@@ -1,61 +1,7 @@
-/* ENEBA */
-
-/* .iacaV8 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: -20px 0 50px;
-}
-
-.Pd7evM {
-    display: flex;
-    width: 100%;
-    max-width: 1920px;
-    position: absolute;
-    overflow: hidden;
-    z-index: 1;
-} */
-
-/* GPT */
-
-/* .iacaV8 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: -20px 0 50px;
-}
-
-.Pd7evM {
-    display: flex;
-    width: 100%;
-    max-width: 1920px;
-    position: absolute;
-    overflow: hidden;
-    z-index: 1;
-    list-style: none; 
-} */
-
-/* GENERAL */
-/* .slide {
-    width: 100%;
-    height: 400px; 
-
-    background-size: cover;
-    background-position: center;
-    list-style: none;
-}
-
-@media (min-width: 801px) {
-    .Pd7evM li.slide {
-        flex: 1;
-    }
-} */
-
 .iacaV8 {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* margin: -20px 0 50px; */
     margin: 0 0 50px;
 }
 
@@ -63,34 +9,73 @@
     display: flex;
     width: 100%;
     max-width: 1920px;
-    overflow: hidden; /* mantenido para ocultar lo que se desborda */
-    z-index: 1;
+    overflow: hidden;
     padding: 0;
     margin: 0;
     list-style: none;
+    height: 400px; /* Altura fija */
 }
 
 .slide {
-    position: relative; /* necesario para posicionar el boton dentro */
-    flex: 1; /* clave: cada slide ocupa el mismo espacio */
-    height: 400px;
-    background-size: cover;
+    position: relative;
+    height: 400px; /* Altura fija */
     background-position: center;
+    background-repeat: no-repeat;
+    transition: flex 0.5s ease-in-out;
+    overflow: hidden; /* Importante para controlar el contenido */
+}
+
+.slide.inactive {
+    flex: 1;
+    /* Para inactivas (200x400): usar cover para llenar el área */
+    background-size: cover;
+}
+
+.slide.active {
+    flex: 5;
+    /* Para activas (1500x400): usar 100% height y auto width */
+    background-size: auto 100%;
 }
 
 .slide button {
-    position: absolute; /* para cubrir todo el slide */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: none; /* sin fondo */
+    /* Para thumbnails (200x400): usar cover */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: none;
     padding: 0;
     margin: 0;
     cursor: pointer;
     z-index: 2;
-    opacity: 0; /* lo hace invisible */
+    opacity: 1;
 }
 
+/* Alternativa: Si quieres que las activas también usen cover */
+/*
+.slide.active {
+    flex: 5;
+    background-size: cover;
+}
+*/
 
+/* Otra alternativa: Para forzar altura exacta */
+/*
+.slide.active {
+    flex: 5;
+    background-size: auto 400px;
+}
+
+.slide.inactive {
+    flex: 1;
+    background-size: auto 400px;
+}
+
+.slide button {
+    background-size: auto 400px;
+}
+*/
