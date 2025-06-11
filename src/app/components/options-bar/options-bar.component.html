@@ -1,12 +1,9 @@
-<div>
+<!-- <div>
 
     <i class="fa-solid fa-chevron-left">
             <button type="button" class="xoKC1D" aria-label="Mostrar categorías anteriores" disabled=""></button>
     </i>
 
-    <!-- Como solo sera un carro de compras sencillo, es mejor no meter consolas porque tu Base de datos no cuenta con 
-     informacion de las consolas de los juegos porque son de steam en su mayoria, entonces en las opciones coloca cosas como
-     los generos, accion, disparos, etc. -->
     <nav>
         <a href="">
             <i class="fa-solid fa-fire"></i>
@@ -21,4 +18,44 @@
     <i class="fa-solid fa-chevron-right">
         <button type="button" class="xoKC1D" aria-label="Mostrar categorías anteriores" disabled=""></button>
     </i>
+</div> -->
+
+<div class="barra-principal">
+    <button type="button" class="boton-lateral" aria-label="Mostrar categorías anteriores" disabled>
+        <!-- <i class="fa-solid fa-chevron-left" style="color: #ffffff;"></i> -->
+        <svg width="9" height="15" viewBox="0 0 9 15">
+            <path fill="currentColor" fill-rule="nonzero" d="M8.35 14.36c.2-.2.2-.51 0-.7L1.76 7.5l6.59-6.17c.2-.19.2-.5 0-.7a.55.55 0 0 0-.75 0L.65 7.14c-.1.1-.15.22-.15.35 0 .13.05.26.15.35l6.95 6.5c.2.21.54.21.75.02z" />
+         </svg>
+    </button>
+
+
+
+        <!-- Como solo sera un carro de compras sencillo, es mejor no meter consolas porque tu Base de datos no cuenta con 
+     informacion de las consolas de los juegos porque son de steam en su mayoria, entonces en las opciones coloca cosas como
+     los generos, accion, disparos, etc. -->
+
+     <!-- Se desborda hacia la derecha cuando hay muchos iconos a la derecha, recuerda resolver esto ya que para algo tienes los botones -->
+    <nav class="iconos-centrales">
+        <a href="#">
+            <i class="fa-solid fa-fire"></i>
+            <span>Reciente</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-arrow-up-right-dots"></i>
+            <span>Populares</span>
+        </a>
+                <a href="#">
+            <i class="fa-solid fa-fire"></i>
+            <span>Reciente</span>
+        </a>
+    </nav>
+
+
+    
+    <button type="button" class="boton-lateral" aria-label="Mostrar categorías siguientes" disabled>
+        <!-- <i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i> -->
+        <svg width="9" height="15" viewBox="0 0 9 15">
+            <path fill="currentColor" fill-rule="nonzero" d="M.65.64c-.2.2-.2.51 0 .7L7.24 7.5.65 13.66c-.2.19-.2.5 0 .7.21.19.55.19.75 0l6.95-6.5c.1-.1.15-.22.15-.35a.49.49 0 0 0-.15-.35L1.4.66A.54.54 0 0 0 .65.64z"></path>
+        </svg>
+    </button>
 </div>

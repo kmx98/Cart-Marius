@@ -1,3 +1,29 @@
+
+
+.y_KhwT {
+    display: flex
+;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    z-index: 0;
+} /*Este seria el div de Eneva basicamente esto tendria que ir en .barra-principal pero se me acomoda mal*/
+
+.zyqj8m {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1;
+    position: relative;
+    gap: 5px;
+    overflow: auto;
+    scrollbar-width: none;
+    margin: 0 -20px;
+    padding: 0 20px;
+} /*Este style va en el nav de Eneva, basicamente esto tendria que ir en .iconos-centrales pero se me acomoda mal*/
+
 .xoKC1D {
     z-index: 1;
     position: relative;
@@ -8,13 +34,59 @@
     transition-property: color, opacity, background;
     align-self: stretch;
     background: rgba(0, 0, 0, 0);
+} /*Este style va en los button de Eneva, basicamente esto tendria que ir en .boton-lateral pero se me acomoda mal*/
+
+.barra-principal {
+    display: flex;
+    align-items: center;
+    background-color: #4618ac;
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    z-index: 0;
 }
 
-.xoKC1D:first-child {
-    margin-left: -20px;
-    background-image: linear-gradient(90deg, #4618AC 50%, transparent);
+.boton-lateral {
+    z-index: 1;
+    position: relative;
+    background: none;
+    border: 0;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.xoKC1D[disabled] {
-    color: #9385b2;
+.boton-lateral svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: white;
+    vertical-align: middle;
+    transition-duration: 250ms;
+    transition-property: color, opacity, background;
+    align-self: stretch;
+    background: rgba(0, 0, 0, 0);
 }
+
+
+.iconos-centrales {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 1;
+}
+
+.iconos-centrales a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.iconos-centrales i {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
