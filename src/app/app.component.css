@@ -1,0 +1,42 @@
+/* .dMZWSu.QGxW_F {
+    max-width: calc(1200px + 40px);
+    padding: 0 20px;
+}
+
+.dMZWSu {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dMZWSu app-advertisement-banner {
+    display: block;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+} */
+
+/* Contenedor centrado */
+.dMZWSu {
+    width: 100%;
+    max-width: 75rem; /* equivalente a 1200px si 1rem = 16px */
+    margin: 0 auto;
+    padding: 0 1.25rem; /* 20px */
+    box-sizing: border-box;
+}
+
+/* Variante con padding compensado */
+.dMZWSu.QGxW_F {
+    max-width: calc(75rem + 2.5rem); /* 1200px + 40px */
+}
+
+/* Banner a pantalla completa */
+.dMZWSu app-advertisement-banner {
+    display: block;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    z-index: 0;
+}
+
+
+
+

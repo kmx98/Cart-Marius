@@ -3,13 +3,15 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AdvertisementBannerComponent } from './components/advertisement-banner/advertisement-banner.component';
 import { OptionsBarComponent } from './components/options-bar/options-bar.component';
+import { CardsViewSectionComponent } from './components/cards-view-section/cards-view-section.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, 
             NavbarComponent,
             AdvertisementBannerComponent,
-            OptionsBarComponent],
+            OptionsBarComponent,
+            CardsViewSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
