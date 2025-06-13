@@ -3,5 +3,11 @@
 /*Esto era el margen que te jodia pero con esto de abajo se arregla*/
 body { 
     margin: 0; 
-    /* background: #4618ac; */
+    background: #4618ac;
+    /* font-family: 'Arial', sans-serif;  */
+
+    /* Esto tambien afecta a la barra superior y no deberia tener letra tan grande alli, hay que arreglar eso */
+    font: 1.6rem / 1.5 "metropolis", Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #fff; /* Cambia el color del texto a rojo */
 }

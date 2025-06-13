@@ -1,37 +1,64 @@
 
-.DoW3u1>section:nth-child(odd) {
+/* ============================
+   CONTENEDOR DE SECTION IMPAR
+   ============================ */
+
+/* Estilos para las secciones impares del contenedor principal (.DoW3u1) */
+.DoW3u1 > section:nth-child(odd) {
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
-    align-items: flex-start; /* 👈 fuerza que el contenido esté alineado a la izquierda */
-    position: relative;
-    /* padding-top: 20px; */
+    align-items: flex-start; /* Alinea todo el contenido a la izquierda */
+    position: relative;      /* Necesario para posicionar el ::after de fondo */
 }
 
+/* ============================
+   FONDO OSCURO DETRÁS DEL SECTION
+   ============================ */
+
+/* Crea un fondo oscuro semi-transparente a lo ancho de la ventana */
 .DoW3u1 > section:nth-child(odd)::after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    z-index: -1;                 /* Coloca el fondo detrás del contenido */
     background: rgba(0, 0, 0, 0.3);
-    width: 100vw;
+    width: 100vw;                /* Ocupa todo el ancho de la ventana */
 }
 
+/* ============================
+   PRIMER DIV DEL SECTION (TÍTULO + ICONO)
+   ============================ */
 
-/*Primer div dentro del section*/
+/* Contenedor del título y el icono, en una sola fila */
 .ftAQ7w {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribuye horizontalmente */
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre elementos (aunque 'space-between' ya separa) */
 }
 
+/* Subcontenedor: alinea título e icono horizontalmente */
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre el h1 y el icono */
+}
+
+/* (Opcional) Estilo aplicado al h1 — hace que ocupe todo el espacio disponible
+   ⚠️ Este 'flex: 1' puede empujar el icono hacia el borde si no está controlado */
 .neIoEL {
     flex: 1;
 }
 
-.hUzwE8, .Sio8uZ {
+/* ============================
+   ESTILOS DEL TÍTULO
+   ============================ */
+
+/* Estilo específico del h1 */
+.hUzwE8 {
     font-size: 1.7rem;
     padding-top: 20px;
     margin-bottom: 30px;
@@ -40,12 +67,50 @@
     text-align: left;
 }
 
+/* Estilo general para todos los h1 */
 h1 {
-    /* font-size: 2rem; */
     line-height: 1.25;
     margin-top: 10px;
     margin-bottom: 30px;
 }
+
+/* ============================
+   ICONO DE INFORMACIÓN
+   ============================ */
+
+/* Contenedor exterior del icono (puede contener tooltip, etc.) */
+.j0kE81 {
+    color: #b3aac9; /* Color del icono */
+}
+
+/* Comportamiento del icono al pasar el cursor */
+.LWVoqN {
+    display: inline-block;
+    background: none;
+    border: 0;
+    cursor: help;   /* Muestra ícono de ayuda al pasar el mouse */
+    position: relative;
+}
+
+/* Estilo del SVG (icono) en sí */
+.LWVoqN svg {
+    width: 0.9rem;
+    height: 0.9rem;
+    display: inline-block;     /* Mantiene el ícono alineado con el texto */
+    vertical-align: middle;    /* Alinea verticalmente con el texto */
+    fill: currentColor;        /* Usa el color del texto (heredado de .j0kE81) */
+}
+
+/* Amplía el área "clickeable" o de hover del icono */
+.LWVoqN.FMySA1::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+}
+
 
 /*Segundo div dentro del section*/
 
