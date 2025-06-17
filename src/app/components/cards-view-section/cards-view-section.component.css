@@ -28,6 +28,8 @@
     width: 100vw;                /* Ocupa todo el ancho de la ventana */
 }
 
+
+
 /* ============================
    PRIMER DIV DEL SECTION (TÍTULO + ICONO)
    ============================ */
@@ -112,8 +114,174 @@ h1 {
 }
 
 
-/*Segundo div dentro del section*/
 
+/* ============================
+   SEGUNDO DIV DEL SECTION (CARRUSEL)
+   ============================ */
 
-/*Tercer div dentro del section*/
+@media (min-width: 601px) {
+    .RMb2Pl {
+        max-width: 100%;
+        position: relative;
+    }
+}
+
+@media (min-width: 601px) {
+    .RMb2Pl .vvAKar {
+        scroll-behavior: smooth; /*Hace que el desplazamiento (scroll) horizontal sea suave en lugar de brusco.*/
+        overflow-x: scroll; /*Permite el desplazamiento horizontal si el contenido se desborda en ese eje.*/
+        display: grid; /*Convierte el contenedor en un grid (rejilla) CSS.*/
+        grid-auto-flow: column; /*Hace que los elementos hijos del grid se acomoden en una sola fila horizontal (columnas automáticas).*/
+        grid-gap: 20px; /*Agrega 20 píxeles de espacio entre cada columna del grid.*/
+        margin-bottom: 30px; /*Añade un margen de 30 píxeles debajo del contenedor.*/
+        padding-bottom: 20px; /*Añade un espacio interno inferior de 20 píxeles.*/
+    }
+}
+
+@media (min-width: 601px) {
+    .RMb2Pl .BdZIev {
+        display: grid; /*Convierte el elemento en un contenedor de grid, es decir, puede organizar elementos hijos en filas y columnas según las reglas del grid de CSS.*/
+        min-width: 200px; /*Establece un ancho mínimo de 200 píxeles para el elemento, evitando que se haga más pequeño que eso incluso si el espacio es reducido.*/
+    }
+}
+
+/*Styles especifico de la card*/
+@media (min-width: 601px) {
+    .ssdbYG {
+        overflow: hidden;
+    }
+}
+
+.t8TnVR {
+    border: 1px solid #63e3c2;
+}
+
+.pFaGHa {
+    display: grid;
+    position: relative;
+    z-index: 0;
+    font-weight: 800;
+    line-height: 1;
+    font-size: 1.2rem;
+    background: #1f0a4d;
+}
+
+.ocultar {
+    /*falta agregar estilo para ocultar el boton de agregar al carrito y desplegarlo cuando el mouse este este posicionado en la card*/
+}
+
+.uy1qit {
+    display: grid; /*Convierte el elemento en un contenedor de rejilla (grid), para organizar contenido usando filas y columnas.*/
+    grid-template: /*Define áreas con nombre dentro del grid. En este caso, crea una columna con tres filas apiladas verticalmente: (img, top, bottom)*/
+        "img"
+        "top"
+        "bottom";
+    grid-template-columns: 1fr; /*Crea una sola columna que ocupe todo el ancho disponible (1fr = una fracción del espacio disponible).*/
+    grid-template-rows: auto 1fr auto; /*Define la altura de cada fila:  (img) → auto: altura basada en su contenido 
+                                                                         (top) → 1fr: toma el espacio restante
+                                                                         (bottom) → auto: también basada en su contenido*/
+}
+
+@media (min-width: 601px) {
+    .GZjXOw {
+        display: block;
+    }
+}
+
+.GZjXOw {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.pFaGHa .AYvEf0 {
+    transition: opacity 150ms ease-in-out;
+    position: relative;
+    padding-top: 140%;
+    margin-bottom: -60px;
+}
+
+.v5wuNi {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.pFaGHa .LBwiWP::before {
+    content: "";
+    display: block;
+    background: linear-gradient(180deg, #2C0E6C 0%, #3C1395 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.pFaGHa .LBwiWP::after {
+    content: attr(data-text);
+    position: absolute;
+    top: calc(50% - 26px);
+    right: 0;
+    left: 0;
+    color: rgba(255, 255, 255, .55);
+    text-align: center;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.FQu1X9.f02Gqa {
+    /* display: block; */ /*cambie esto*/
+    display: flex;
+}
+
+.FQu1X9 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* top: -22px; */ /*cambie esto*/
+    top: 195px;
+    left: 0;
+    gap: 5px;
+    height: 22px;
+    width: 100%;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, .55);
+    opacity: 1;
+    transition: .25s opacity ease-in-out;
+}
+
+.O4be9G {
+    width: 16px;
+    height: 16px;
+}
+
+.uAsjsO {
+    font-weight: 800;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .85);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 31px);
+}
+
+/* ============================
+   TERCER DIV DEL SECTION (BOTON MOSTRAR TODO)
+   ============================ */
 
