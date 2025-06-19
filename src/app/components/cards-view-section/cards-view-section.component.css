@@ -146,6 +146,8 @@ h1 {
 }
 
 /*Styles especifico de la card*/
+
+/****************************************** IMAGEN ************************************************************/
 @media (min-width: 601px) {
     .ssdbYG {
         overflow: hidden;
@@ -245,7 +247,8 @@ img {
 
 .FQu1X9.f02Gqa {
     /* display: block; */ /*cambie esto*/
-    display: flex;
+    /* display: flex; */
+    display: block;
 }
 
 .FQu1X9 {
@@ -254,7 +257,8 @@ img {
     justify-content: center;
     position: absolute;
     /* top: -22px; */ /*cambie esto*/
-    top: 195px;
+    top: -22px;
+    /* top: 195px; */
     left: 0;
     gap: 5px;
     height: 22px;
@@ -280,6 +284,230 @@ img {
     text-overflow: ellipsis;
     max-width: calc(100% - 31px);
 }
+
+/****************************************** DESCRIPCION ************************************************************/
+
+@media (min-width: 601px) {
+    .pFaGHa.WpvaUk .igOV_C {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+@media (min-width: 601px) {
+    .ssdbYG .i0itL7 {
+        transform: translateY(96px);
+        margin-top: -45px;
+    }
+}
+
+@media (min-width: 601px) {
+    .ssdbYG .igOV_C {
+        transform: translateY(50px);
+        transition: transform 300ms ease-in-out;
+        background: #1f0a4d;
+    }
+}
+
+.O4be9G {
+    width: 16px;
+    height: 16px;
+}
+
+.tUUnLz {
+    position: relative;
+    grid-area: top;
+    display: grid;
+    padding: 15px 15px 10px;
+}
+
+@media (min-width: 601px) {
+    .pFaGHa.WpvaUk .dHF1Ln.Bci_K2 {
+        top: -60px;
+    }
+}
+
+@media (min-width: 601px) {
+    .pFaGHa.WpvaUk .dHF1Ln {
+        position: absolute;
+        top: -45px;
+        padding: 7px 5px;
+    }
+}
+
+.dHF1Ln {
+    background-color: #63e3c2;
+    color: #1f0a4d;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.QrWHlF {
+    color: #1f0a4d;
+    margin-right: 5px;
+}
+
+._gHdrW {
+    text-transform: uppercase;
+}
+
+.x4MuJo {
+    min-width: 0;
+}
+
+.pFaGHa .Pm6lW1 {
+    color: #23c299;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.pFaGHa .lirayz {
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.pFaGHa .YLosEL {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.5;
+    max-height: 3em;
+}
+
+@media (min-width: 601px) {
+    .pFaGHa.WpvaUk .b3POZC {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-area: bottom;
+        padding: 0 15px 15px;
+        min-width: 0;
+        height: 100%;
+    }
+}
+
+.oSVLlh {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.jMRDi3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+    height: 100%;
+}
+
+.UWjvtk {
+    flex-basis: 100%;
+}
+
+.Lyw0wM {
+    display: grid;
+}
+
+.iqjN1x {
+    color: #b3aac9;
+    position: relative;
+}
+
+.DTv7Ag {
+    margin-top: 4px;
+    font-size: 2.2rem;
+}
+
+.L5ErLT {
+    white-space: nowrap;
+}
+
+.Gy1Sfn, .wTj8OK {
+    font-size: .8em;
+}
+
+.QT4ezl {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #84e916;
+}
+
+.QT4ezl.ZvP7DX {
+    font-weight: 800;
+}
+
+.QT4ezl.Kznwmr {
+    font-size: 1.2rem;
+}
+
+.XFafY_ {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .7);
+    margin-top: 5px;
+    align-self: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.BwtiXe {
+    vertical-align: middle;
+}
+
+.Gzm837 {
+    display: none;
+}
+
+.w6wAha {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid;
+    color: #fff;
+}
+
+/* audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+} */
+
+.MKj50a {
+    display: flex;
+    flex-direction: column;
+}
+
+.OhNv7m {
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.MKj50a button, .MKj50a a {
+    position: relative;
+    z-index: 2;
+}
+
+.pr0yIU {
+    background-color: #fad318;
+    color: #000;
+}
+
+.w6wAha {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid;
+    color: #fff;
+}
+
+
 
 /* ============================
    TERCER DIV DEL SECTION (BOTON MOSTRAR TODO)
