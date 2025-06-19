@@ -584,6 +584,7 @@ svg:not(:root) {
             flex-direction: column;
             gap: 12px;
             min-height: 200px;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* CASHBACK BADGE */
@@ -681,11 +682,46 @@ svg:not(:root) {
             height: 14px;
         }
 
-        /* BOTONES */
+        /* BOTONES CON ANIMACIÓN */
         .action-buttons {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            /* transform: translateY(100%); */
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            /* position: relative; */
+            overflow: hidden;
+
+            height: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Mostrar botones al hacer hover en la card */
+        .product-card:hover .action-buttons {
+            transform: translateY(0);
+            opacity: 1;
+
+            height: auto;
+            visibility: visible;
+        }
+
+        /* Animación adicional para cada botón individual */
+        .action-buttons .btn-primary,
+        .action-buttons .btn-secondary {
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover .action-buttons .btn-primary {
+            transform: translateY(0);
+            transition-delay: 0.1s;
+        }
+
+        .product-card:hover .action-buttons .btn-secondary {
+            transform: translateY(0);
+            transition-delay: 0.2s;
         }
 
         .btn-primary {
