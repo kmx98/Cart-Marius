@@ -525,16 +525,19 @@ svg:not(:root) {
         /* CONTENEDOR PRINCIPAL DE LA CARD */
         .product-card {
             max-width: 350px;
-            background: #1f0a4d;
+            background: transparent;
             border-radius: 8px;
             overflow: hidden;
             position: relative;
             margin: 0 auto;
-            transition: transform 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 400px; /* Altura normal sin espacio extra */
         }
 
+        /* Al hacer hover, la card crece para mostrar los botones */
         .product-card:hover {
             transform: translateY(-5px);
+            height: 520px; /* Se expande para mostrar todo el contenido */
         }
 
         /* SECCIÓN DE IMAGEN */
@@ -543,6 +546,7 @@ svg:not(:root) {
             background: linear-gradient(180deg, #2C0E6C 0%, #3C1395 100%);
             padding-top: 56.25%; /* Aspect ratio 16:9 */
             overflow: hidden;
+            border-radius: 8px 8px 0 0; /* Solo esquinas superiores redondeadas */
         }
 
         .product-image {
@@ -577,14 +581,22 @@ svg:not(:root) {
             height: 16px;
         }
 
-        /* SECCIÓN DE CONTENIDO */
+        /* SECCIÓN DE CONTENIDO - CLAVE DEL EFECTO */
         .content-section {
             padding: 15px;
             display: flex;
             flex-direction: column;
             gap: 12px;
-            min-height: 200px;
+            height: calc(100% - 200px);
+            position: relative;
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #1f0a4d;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* Cuando se hace hover, mueve el contenido hacia arriba */
+        .product-card:hover .content-section {
+            transform: translateY(-120px);
         }
 
         /* CASHBACK BADGE */
@@ -635,7 +647,7 @@ svg:not(:root) {
         /* SECCIÓN DE PRECIO */
         .price-section {
             margin-top: auto;
-            padding-top: 15px;
+            padding-top: 10px; /* Reducido para dar más espacio */
         }
 
         .price-info {
@@ -643,30 +655,42 @@ svg:not(:root) {
             justify-content: space-between;
             align-items: flex-end;
             gap: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Reducido para dar más espacio a los botones */
         }
 
         .price-container {
             flex: 1;
+            text-align: left; /* Asegurar alineación a la izquierda */
+        }
+
+        /* MODIFICACIÓN: Precio principal y etiqueta en la misma línea */
+        .price-label-main {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 4px;
         }
 
         .price-label {
             color: #b3aac9;
             font-size: 0.75rem;
-            margin-bottom: 2px;
+            /* margin-bottom: 2px; */
+            margin: 0; /* Eliminar margin para que estén en línea */
         }
 
         .price-main {
             font-size: 1.4rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 4px;
+            /* margin-bottom: 4px; */
+            margin: 0; /* Eliminar margin para que estén en línea */
         }
 
         .cashback-info {
             color: #84e916;
             font-size: 0.8rem;
             font-weight: 600;
+            text-align: left; /* Alineación explícita a la izquierda */
         }
 
         .likes-section {
@@ -682,45 +706,40 @@ svg:not(:root) {
             height: 14px;
         }
 
-        /* BOTONES CON ANIMACIÓN */
+        /* BOTONES CON ANIMACIÓN MEJORADA */
         .action-buttons {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            /* transform: translateY(100%); */
+            gap: 8px; /* Reducido para optimizar espacio */
             opacity: 0;
+            transform: translateY(15px); /* Reducido para mejor entrada */
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            /* position: relative; */
-            overflow: hidden;
-
-            height: 0;
-            visibility: hidden;
-            transform: translateY(20px);
+            margin-top: 10px; /* Reducido para dar más espacio */
         }
 
         /* Mostrar botones al hacer hover en la card */
         .product-card:hover .action-buttons {
-            transform: translateY(0);
             opacity: 1;
-
-            height: auto;
-            visibility: visible;
+            transform: translateY(0);
         }
 
-        /* Animación adicional para cada botón individual */
+        /* Animación individual de botones */
         .action-buttons .btn-primary,
         .action-buttons .btn-secondary {
-            transform: translateY(20px);
-            transition: all 0.3s ease;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .product-card:hover .action-buttons .btn-primary {
             transform: translateY(0);
+            opacity: 1;
             transition-delay: 0.1s;
         }
 
         .product-card:hover .action-buttons .btn-secondary {
             transform: translateY(0);
+            opacity: 1;
             transition-delay: 0.2s;
         }
 
@@ -728,10 +747,10 @@ svg:not(:root) {
             background: #fad318;
             color: #000000;
             border: none;
-            padding: 12px 16px;
+            padding: 10px 16px; /* Reducido padding vertical */
             border-radius: 6px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem; /* Ligeramente más pequeño */
             cursor: pointer;
             transition: all 0.2s ease;
         }
@@ -745,10 +764,10 @@ svg:not(:root) {
             background: transparent;
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 12px 16px;
+            padding: 10px 16px; /* Reducido padding vertical */
             border-radius: 6px;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.85rem; /* Ligeramente más pequeño */
             cursor: pointer;
             transition: all 0.2s ease;
             text-decoration: none;
@@ -785,6 +804,10 @@ svg:not(:root) {
             gap: 30px;
             justify-items: center;
             margin-top: 40px;
+
+            /* Estas dos lineas evitan que el fondo del section se mueve verticalmente hacia abajo */
+            overflow: hidden;
+            height: 400px; /* Altura fija del contenedor */
         }
 
         .comparison {
