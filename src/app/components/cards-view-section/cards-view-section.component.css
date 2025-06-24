@@ -129,12 +129,20 @@ h1 {
 @media (min-width: 601px) {
     .RMb2Pl .vvAKar {
         scroll-behavior: smooth; /*Hace que el desplazamiento (scroll) horizontal sea suave en lugar de brusco.*/
-        overflow-x: scroll; /*Permite el desplazamiento horizontal si el contenido se desborda en ese eje.*/
+        /*overflow-x: scroll; /*Permite el desplazamiento horizontal si el contenido se desborda en ese eje.*/
+        overflow-x: hidden; /* CAMBIADO: ocultar scrollbar nativa */
         display: grid; /*Convierte el contenedor en un grid (rejilla) CSS.*/
         grid-auto-flow: column; /*Hace que los elementos hijos del grid se acomoden en una sola fila horizontal (columnas automáticas).*/
         grid-gap: 20px; /*Agrega 20 píxeles de espacio entre cada columna del grid.*/
         margin-bottom: 30px; /*Añade un margen de 30 píxeles debajo del contenedor.*/
         padding-bottom: 20px; /*Añade un espacio interno inferior de 20 píxeles.*/
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE */
+    }
+
+    /* Ocultar scrollbar completamente en WebKit */
+    .RMb2Pl .vvAKar::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -145,46 +153,7 @@ h1 {
     }
 }
 
-/* Configuración base de la scrollbar - siempre presente pero invisible */
-.RMb2Pl .vvAKar::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
 
-/* Track invisible por defecto */
-.RMb2Pl .vvAKar::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 4px;
-}
-
-/* Thumb invisible por defecto */
-.RMb2Pl .vvAKar::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-}
-
-/* Firefox - oculta por defecto */
-.RMb2Pl .vvAKar {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-/* Al hacer hover - Firefox */
-.RMb2Pl .vvAKar:hover {
-    scrollbar-width: thin;
-}
-
-/* Al hacer hover - WebKit: aparece el track (fondo grisáceo semi-transparente) */
-.RMb2Pl .vvAKar:hover::-webkit-scrollbar-track {
-    background: rgba(200, 200, 200, 0.2);
-}
-
-/* Al hacer hover - WebKit: aparece el thumb (barra blanca) */
-.RMb2Pl .vvAKar:hover::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
 
 
 /* ============================

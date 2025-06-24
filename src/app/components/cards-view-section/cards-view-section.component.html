@@ -19,13 +19,16 @@
 
         <!-- cards -->
         <div class="RMb2Pl">
-            <section class="vvAKar">
+            <section class="vvAKar" #carousel>
                <app-card></app-card>
                <app-card></app-card>
                <app-card></app-card>
                <app-card></app-card>
                <app-card></app-card>
             </section>
+
+            <!-- Scrollbar personalizada -->
+            <app-scroll-bar [carousel]="carousel"></app-scroll-bar>
         </div>
 
         <!-- boton -->
