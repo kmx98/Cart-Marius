@@ -63,7 +63,7 @@
 .hUzwE8 {
     font-size: 1.7rem;
     padding-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     display: block;
     width: 100%;
     text-align: left;
@@ -145,7 +145,89 @@ h1 {
     }
 }
 
+/* Configuración base de la scrollbar - siempre presente pero invisible */
+.RMb2Pl .vvAKar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track invisible por defecto */
+.RMb2Pl .vvAKar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+}
+
+/* Thumb invisible por defecto */
+.RMb2Pl .vvAKar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+/* Firefox - oculta por defecto */
+.RMb2Pl .vvAKar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Al hacer hover - Firefox */
+.RMb2Pl .vvAKar:hover {
+    scrollbar-width: thin;
+}
+
+/* Al hacer hover - WebKit: aparece el track (fondo grisáceo semi-transparente) */
+.RMb2Pl .vvAKar:hover::-webkit-scrollbar-track {
+    background: rgba(200, 200, 200, 0.2);
+}
+
+/* Al hacer hover - WebKit: aparece el thumb (barra blanca) */
+.RMb2Pl .vvAKar:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
 /* ============================
    TERCER DIV DEL SECTION (BOTON MOSTRAR TODO)
    ============================ */
 
+.ZmqmGD {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    align-self: center; /* <-- esta es la clave */
+    width: 100%; /* asegura que pueda centrarse dentro del section */
+}
+
+.C5d2b6 {
+    min-width: 194px;
+    margin: 0 auto 40px;
+}
+
+.w6wAha {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid;
+    color: #fff;
+}
+
+.qzNRBf, .w6wAha, .GE4aMb, .pr0yIU {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    /* text-align: center; */
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; */
+    /* transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out; */
+    min-height: 35px;
+    padding: 0 10px;
+}
+
+a, button {
+    text-decoration: none;
+    /* cursor: pointer; */
+    /* color: inherit; */
+}
