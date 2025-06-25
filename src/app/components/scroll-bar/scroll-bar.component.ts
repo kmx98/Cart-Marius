@@ -9,7 +9,7 @@ import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChi
 })
 export class ScrollBarComponent implements OnInit, AfterViewInit, OnDestroy{
 
-  @Input() carousel!: HTMLElement;  // 🔹 ahora viene desde el padre
+  @Input() carousel!: HTMLElement;
   @ViewChild('scrollThumb', { static: false }) scrollThumb!: ElementRef<HTMLElement>;
   @ViewChild('scrollTrack', { static: false }) scrollTrack!: ElementRef<HTMLElement>;
 
@@ -17,23 +17,23 @@ export class ScrollBarComponent implements OnInit, AfterViewInit, OnDestroy{
   private startX: number = 0;
   private scrollStartLeft: number = 0;
   private resizeListener?: () => void;
+  private animationFrameId?: number;
 
   ngOnInit(): void {
     // Inicialización del componente
   }
 
   ngAfterViewInit(): void {
-    // Inicializar el carousel después de que la vista esté lista
-    console.log('Carousel element:', this.carousel);
-    console.log('ScrollThumb element:', this.scrollThumb);
-    console.log('ScrollTrack element:', this.scrollTrack);
     this.initializeCarousel();
   }
 
   ngOnDestroy(): void {
-    // Limpiar event listeners
+    // Limpiar event listeners y animation frames
     if (this.resizeListener) {
       window.removeEventListener('resize', this.resizeListener);
+    }
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
     }
   }
 
@@ -42,6 +42,9 @@ export class ScrollBarComponent implements OnInit, AfterViewInit, OnDestroy{
       console.error('No se pudieron encontrar los elementos requeridos del carousel');
       return;
     }
+
+    // 🔹 Asegurar scroll instantáneo
+    this.carousel.style.scrollBehavior = 'auto';
 
     // Actualizar scrollbar cuando se haga scroll
     this.carousel.addEventListener('scroll', () => this.updateScrollbar());
@@ -89,30 +92,70 @@ export class ScrollBarComponent implements OnInit, AfterViewInit, OnDestroy{
     this.startX = e.clientX;
     this.scrollStartLeft = this.carousel.scrollLeft;
     
-    document.addEventListener('mousemove', this.onMouseMove);
-    document.addEventListener('mouseup', this.onMouseUp);
+    // 🔹 Añadir clase para deshabilitar transiciones durante el drag
+    this.scrollThumb.nativeElement.classList.add('dragging');
+    
+    // 🔹 Añadir clase no-select al body
+    document.body.classList.add('no-select');
+    document.body.style.cursor = 'grabbing';
+    
+    document.addEventListener('mousemove', this.onMouseMove, { passive: false });
+    document.addEventListener('mouseup', this.onMouseUp, { passive: false });
+    
     e.preventDefault();
   }
 
   private onMouseMove = (e: MouseEvent): void => {
     if (!this.isDragging || !this.carousel || !this.scrollThumb || !this.scrollTrack) return;
     
-    const deltaX: number = e.clientX - this.startX;
+    e.preventDefault();
+    
+    // 🔹 Cancelar frame anterior y crear uno nuevo para suavidad
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
+    }
+    
+    this.animationFrameId = requestAnimationFrame(() => {
+      this.performDrag(e.clientX);
+    });
+  }
+
+  private performDrag(clientX: number): void {
+    if (!this.carousel || !this.scrollThumb || !this.scrollTrack) return;
+
+    const deltaX: number = clientX - this.startX;
     const trackWidth: number = this.scrollTrack.nativeElement.clientWidth;
     const thumbWidth: number = this.scrollThumb.nativeElement.offsetWidth;
     const maxThumbPosition: number = trackWidth - thumbWidth;
     
-    // Hacer el movimiento más sensible/rápido (multiplicar por 2)
-    const scrollRatio: number = (deltaX * 2) / maxThumbPosition;
+    // 🔹 Calcular relación exacta 1:1 con el movimiento del mouse
+    // La relación debe ser: movimiento del mouse = movimiento del thumb
+    const scrollRatio: number = deltaX / maxThumbPosition;
     const maxScroll: number = this.carousel.scrollWidth - this.carousel.clientWidth;
     
-    this.carousel.scrollLeft = this.scrollStartLeft + (scrollRatio * maxScroll);
+    const newScrollLeft = this.scrollStartLeft + (scrollRatio * maxScroll);
+    
+    // 🔹 Aplicar directamente para movimiento 1:1
+    this.carousel.scrollLeft = Math.max(0, Math.min(newScrollLeft, maxScroll));
   }
 
   private onMouseUp = (): void => {
     this.isDragging = false;
+    
+    // 🔹 Remover clase dragging
+    this.scrollThumb.nativeElement.classList.remove('dragging');
+    
+    // 🔹 Restaurar estilos del body
+    document.body.classList.remove('no-select');
+    document.body.style.cursor = '';
+    
     document.removeEventListener('mousemove', this.onMouseMove);
     document.removeEventListener('mouseup', this.onMouseUp);
+    
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
+      this.animationFrameId = undefined;
+    }
   }
 
   private handleTrackClick(e: MouseEvent): void {
@@ -123,18 +166,23 @@ export class ScrollBarComponent implements OnInit, AfterViewInit, OnDestroy{
     const clickX: number = e.clientX - rect.left;
     const trackWidth: number = rect.width;
     
-    // Calcular la posición donde debería estar el centro del thumb
     const clickRatio: number = clickX / trackWidth;
     const maxScroll: number = this.carousel.scrollWidth - this.carousel.clientWidth;
     
-    this.carousel.scrollLeft = clickRatio * maxScroll;
+    // 🔹 Movimiento inmediato sin animación
+    this.carousel.scrollLeft = Math.max(0, Math.min(clickRatio * maxScroll, maxScroll));
   }
 
   private handleWheel(e: WheelEvent): void {
     if (!this.carousel) return;
     
     e.preventDefault();
-    this.carousel.scrollLeft += e.deltaY;
+    
+    // 🔹 Aplicar directamente para máxima responsividad
+    const scrollAmount = e.deltaY;
+    const newScrollLeft = this.carousel.scrollLeft + scrollAmount;
+    const maxScroll = this.carousel.scrollWidth - this.carousel.clientWidth;
+    
+    this.carousel.scrollLeft = Math.max(0, Math.min(newScrollLeft, maxScroll));
   }
-
 }

@@ -134,7 +134,7 @@ h1 {
         display: grid; /*Convierte el contenedor en un grid (rejilla) CSS.*/
         grid-auto-flow: column; /*Hace que los elementos hijos del grid se acomoden en una sola fila horizontal (columnas automáticas).*/
         grid-gap: 20px; /*Agrega 20 píxeles de espacio entre cada columna del grid.*/
-        margin-bottom: 30px; /*Añade un margen de 30 píxeles debajo del contenedor.*/
+        margin-bottom: 0px; /*Añade un margen de 0 píxeles debajo del contenedor.*/
         padding-bottom: 20px; /*Añade un espacio interno inferior de 20 píxeles.*/
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE */
@@ -166,6 +166,7 @@ h1 {
     justify-content: center;
     align-self: center; /* <-- esta es la clave */
     width: 100%; /* asegura que pueda centrarse dentro del section */
+    margin: 30px 0 0 0; /*Añade un margen de 0 píxeles debajo del contenedor.*/
 }
 
 .C5d2b6 {

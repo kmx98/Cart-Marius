@@ -1,6 +1,5 @@
-
 /* ============================
-    SCROLLBAR PERSONALIZADA - NUEVO
+    SCROLLBAR PERSONALIZADA - OPTIMIZADA
     ============================ */
 
 .custom-scrollbar {
@@ -9,11 +8,12 @@
     left: 0;
     right: 0;
     height: 8px;
-    /* opacity: 0; */
     opacity: 1;
     transition: opacity 0.3s ease;
-    /* pointer-events: none; */
     pointer-events: auto;
+    /* 🔹 Optimizaciones de rendimiento */
+    will-change: transform;
+    transform: translateZ(0); /* Forzar aceleración por hardware */
 }
 
 .custom-scrollbar-track {
@@ -23,6 +23,9 @@
     border-radius: 4px;
     position: relative;
     pointer-events: auto;
+    /* 🔹 Optimizaciones de rendimiento */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .custom-scrollbar-thumb {
@@ -31,16 +34,56 @@
     height: 100%;
     background: #ffffff;
     border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    cursor: grab;
+    /* 🔹 ELIMINAR TRANSICIÓN PARA MOVIMIENTO INSTANTÁNEO */
+    /* transition: background-color 0.2s ease; */
+    /* 🔹 Optimizaciones críticas para rendimiento */
+    will-change: transform, left, width;
+    transform: translateZ(0);
+    /* 🔹 Asegurar que no haya transiciones */
+    transition: none !important;
 }
 
 .custom-scrollbar-thumb:hover {
     background: #f0f0f0;
+    /* 🔹 Solo mantener transición de color si es necesaria */
+    transition: background-color 0.1s ease;
+}
+
+.custom-scrollbar-thumb:active {
+    cursor: grabbing;
+    background: #e0e0e0;
+    /* 🔹 Sin transición durante el drag */
+    transition: none !important;
+}
+
+/* 🔹 Clase para prevenir selección durante el drag */
+.custom-scrollbar-thumb.dragging {
+    transition: none !important;
+    pointer-events: none; /* Evitar interferencias durante el drag */
 }
 
 /* Mostrar scrollbar en hover del contenedor */
 .RMb2Pl:hover .custom-scrollbar {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* 🔹 Optimizar el contenedor del carousel */
+.RMb2Pl {
+    /* Deshabilitar scroll suave para movimiento instantáneo */
+    scroll-behavior: auto !important;
+    /* Optimizar el scroll en móviles */
+    -webkit-overflow-scrolling: touch;
+    /* Mejorar rendimiento */
+    will-change: scroll-position;
+    transform: translateZ(0);
+}
+
+/* 🔹 Clase para deshabilitar selección de texto durante el drag */
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
