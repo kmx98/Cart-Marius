@@ -2,30 +2,33 @@
 
 <div id="app">
 
-<!-- Ojo: arriba del Navbar debe ir una barra de busqueda con algunos iconos como el carrito de compras -->
+    <!-- Ojo: arriba del Navbar debe ir una barra de busqueda con algunos iconos como el carrito de compras -->
 
-<!-- Navbar -->
-<app-navbar></app-navbar>
+    <!-- Navbar -->
+    <app-navbar></app-navbar>
 
-<main>
+    <main>
 
-    <!-- div de imagenes -->
-    <!-- <app-advertisement-banner></app-advertisement-banner> -->
-
-    <!-- div principal -->
-    <div class="dMZWSu">
         <!-- div de imagenes -->
-        <app-advertisement-banner class="full-width-banner"></app-advertisement-banner>
+        <!-- <app-advertisement-banner></app-advertisement-banner> -->
 
-        <!-- div de targetas de categorias para consolas PSN, XBOX o Steam, etc. -->
-         <app-options-bar></app-options-bar>
+        <!-- div principal -->
+        <div class="dMZWSu">
+            <!-- div de imagenes -->
+            <app-advertisement-banner class="full-width-banner"></app-advertisement-banner>
 
-         <!-- div de secciones como recientes visto recientemente, Lo recomendado, etc. -->
-        <app-cards-view-section></app-cards-view-section>
-        <app-cards-view-section></app-cards-view-section>
-        <app-cards-view-section></app-cards-view-section>
-        <app-cards-view-section></app-cards-view-section>
-    </div>
-</main>
+            <!-- div de targetas de categorias para consolas PSN, XBOX o Steam, etc. -->
+            <app-options-bar></app-options-bar>
+
+            <!-- div de secciones como recientes visto recientemente, Lo recomendado, etc. -->
+            <app-cards-view-section></app-cards-view-section>
+            <app-cards-view-section></app-cards-view-section>
+            <app-cards-view-section></app-cards-view-section>
+            <app-cards-view-section></app-cards-view-section>
+        </div>
+    </main>
+
+    <!-- footer (pie de pagina) -->
+    <app-footer-view></app-footer-view>
 
 </div>
