@@ -24,7 +24,7 @@
     left: 50%;
     transform: translateX(-50%); /* Centra horizontalmente */
     z-index: -1;                 /* Coloca el fondo detrás del contenido */
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */ /*Lo quite porque lo agregue en app.component.css*/
     width: 100vw;                /* Ocupa todo el ancho de la ventana */
 }
 
