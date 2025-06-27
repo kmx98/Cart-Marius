@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.xCd0YY {
+    background: rgba(0, 0, 0, .7);
+    /* padding: 20px 0; */
+}
+
+/*Primer div del footer*/
+.hxkTkl {
+    background: #fff;
+    min-height: 41px;
+}
+
+.hxkTkl > ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: calc(1200px + -40px);
+    margin: 0 auto;
+    padding: 10px 5px;
+    list-style: none;
+}
+
+/* Estilos para los elementos li */
+.hxkTkl > ul > li {
+    display: flex; /* Cambiar a flex */
+    margin-right: 15px; /* Espaciado entre imágenes */
+    align-items: center;
+}
+
+/* Opcional: remover margen del último elemento */
+/* .hxkTkl > ul > li:last-child {
+    margin-right: 0;
+} */
+
+/* Estilos para las imágenes */
+.hxkTkl > ul > li img {
+    height: 20px; /* Altura fija para uniformidad */
+    width: auto; /* Mantener proporción */
+    max-width: 50px; /* Ancho máximo */
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+/*Segundo div del footer*/
