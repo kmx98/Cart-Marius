@@ -4,120 +4,324 @@
     box-sizing: border-box;
 }
 
-.xCd0YY {
-    background: rgba(0, 0, 0, .7);
-    /* padding: 20px 0; */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-/*Primer div del footer*/
+/* Footer principal */
+.xCd0YY {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(26, 26, 26, 0.95));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sección de métodos de pago */
 .hxkTkl {
-    background: #fff;
-    min-height: 41px;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    min-height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hxkTkl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #06b6d4);
 }
 
 .hxkTkl > ul {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    max-width: calc(1200px + -40px);
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 5px;
+    padding: 15px 20px;
     list-style: none;
+    gap: 20px;
 }
 
-/* Estilos para los elementos li */
 .hxkTkl > ul > li {
-    display: flex; /* Cambiar a flex */
-    margin-right: 15px; /* Espaciado entre imágenes */
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Opcional: remover margen del último elemento */
-/* .hxkTkl > ul > li:last-child {
-    margin-right: 0;
-} */
+.hxkTkl > ul > li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
+}
 
-/* Estilos para las imágenes */
 .hxkTkl > ul > li img {
-    height: 20px; /* Altura fija para uniformidad */
-    width: auto; /* Mantener proporción */
-    max-width: 50px; /* Ancho máximo */
+    height: 24px;
+    width: auto;
+    max-width: 60px;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
 }
 
-ol, ul, li {
-    list-style: none;
+.hxkTkl > ul > li:hover img {
+    filter: brightness(1);
 }
 
-/*Segundo div del footer*/
+/* Contenido principal del footer */
 .xpGMZc {
-    max-width: calc(1200px + 40px);
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 20px 50px;
-    font-size: 0.9rem;
-    /* line-height: 1.4; */
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; */
+    padding: 50px 20px;
+    color: #e2e8f0;
 }
 
 .Khz2Vx {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-right: -10px;
-    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.Khz2Vx > ul {
+    list-style: none;
 }
 
 .LygbJr {
-    font-size: 1.4rem;
-    font-weight: 800;
-    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
     padding-bottom: 10px;
 }
 
-.Khz2Vx>ul .UxlV7h {
-    display: block;
+.LygbJr::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 2px;
 }
 
 .UxlV7h {
-    transition: color 150ms ease-in-out;
-    background: none;
-    font-size: 1.2rem;
-    color: #dcd8e6;
-    padding: 3px 0;
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
+.UxlV7h:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.UxlV7h::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    transition: width 0.3s ease;
+}
+
+.UxlV7h:hover::before {
+    width: 10px;
+}
+
+/* Botón especial "Vende en Eneba" */
 .jhj9zO {
-    font-size: 1.2rem;
     display: inline-flex;
-    min-height: 30px;
-    padding-top: 1px;
-    margin-bottom: 10px;
-    min-width: 120px;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 12px 24px;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
-.w6wAha {
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid;
-    color: #fff;
+.jhj9zO:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    background: linear-gradient(135deg, #7c3aed, #6366f1);
 }
 
-.Khz2Vx>div {
-    padding: 30px 10px 0 0;
-    flex: auto;
-}
-
+/* Sección de redes sociales */
 .gvyDFJ {
-    padding: 30px 20px 0 0;
+    margin-top: 20px;
+}
+
+.gvyDFJ ul {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    list-style: none;
+}
+
+.gvyDFJ ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.gvyDFJ ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gvyDFJ ul li a svg {
+    width: 20px;
+    height: 20px;
+    fill: #cbd5e1;
+    transition: fill 0.3s ease;
+}
+
+.gvyDFJ ul li a:hover svg {
+    fill: #ffffff;
+}
+
+/* Sección de descarga de apps */
+.app-download {
+    margin-top: 30px;
 }
 
 .Pho02y {
-    /* font-size: 1.4rem; */
-    font-weight: 800;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
 }
 
 .gG9kIp {
     display: flex;
     gap: 15px;
-    margin-top: 10px;
-    justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
+
+.gG9kIp a {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gG9kIp a:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.gG9kIp img {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+}
+
+/* Trustpilot widget */
+.C6fuvp {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .xpGMZc {
+        padding: 30px 15px;
+    }
+
+    .Khz2Vx {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hxkTkl > ul {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .hxkTkl > ul > li {
+        padding: 6px 8px;
+    }
+
+    .hxkTkl > ul > li img {
+        height: 20px;
+        max-width: 50px;
+    }
+
+    .gvyDFJ ul {
+        justify-content: center;
+    }
+
+    .gG9kIp {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hxkTkl > ul {
+        justify-content: center;
+    }
+
+    .gvyDFJ ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Khz2Vx > ul,
+.gvyDFJ,
+.app-download {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.Khz2Vx > ul:nth-child(2) { animation-delay: 0.1s; }
+.Khz2Vx > ul:nth-child(3) { animation-delay: 0.2s; }
+.Khz2Vx > ul:nth-child(4) { animation-delay: 0.3s; }
+.gvyDFJ { animation-delay: 0.4s; }
+.app-download { animation-delay: 0.5s; }
