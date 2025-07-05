@@ -184,3 +184,276 @@ body {
 
 /*Barra de busqueda*/
 
+.jfM2eM {
+    order: 1;
+    position: relative;
+    margin-right: 20px;
+    margin-left: 0;
+    z-index: 2;
+    transition: opacity 150ms ease-in-out;
+}
+
+@media (min-width: 931px) {
+    .CjrngX {
+        margin-right: auto;
+    }
+}
+
+.PQaJ9X, .CjrngX, .AD7rWk, .Ycu3Cv, .oB6jRX, .CnCqo4 {
+    order: 2;
+    position: relative;
+}
+
+.IrsXHn.P9RW96 {
+    border: none;
+    white-space: nowrap;
+    transition: color 150ms ease-in-out;
+}
+
+.IrsXHn {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1;
+    display: inline-flex;
+}
+
+.w6wAha {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid;
+    color: #fff;
+}
+
+.qzNRBf, .w6wAha, .GE4aMb, .pr0yIU {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+    min-height: 35px;
+    padding: 0 10px;
+}
+
+.W_jtsk {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    margin: -1px 6px 0 0;
+    position: relative;
+}
+
+.W_jtsk>img {
+    max-width: none;
+}
+
+.CWVp7R {
+    display: flex;
+    gap: 7px;
+}
+
+.E2fm8y {
+    border-left: 1px solid #fff;
+}
+
+.hpg3x5 {
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.AD7rWk, .Ycu3Cv, .CnCqo4 {
+    flex: 0 0 auto;
+    align-self: stretch;
+}
+
+.Cm8Xkx {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.FPzK0g {
+    position: relative;
+    height: 100%;
+}
+
+.HWYfxM {
+    background: none;
+    padding: 10px;
+    height: 100%;
+}
+
+.CnCqo4 {
+    display: flex;
+    align-items: center;
+}
+
+.IdNVkT {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 931px) {
+    .IdNVkT>div {
+        display: none;
+    }
+}
+
+.LK3Lbs {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+
+.SswY4b {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 10px;
+    height: 100%;
+    transition: background-color 150ms ease-in-out;
+}
+
+.WCOJA9.i6JfOD {
+    display: none;
+}
+
+.WCOJA9 {
+    z-index: 11;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.i6JfOD {
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .1s ease-out;
+    will-change: opacity;
+    opacity: 0;
+}
+
+.pbTbh2 {
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 50px;
+    background: #fff;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .2);
+}
+
+.VR8IOr {
+    display: none;
+}
+
+.q53Fz_ {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 50px;
+    background: #351183;
+}
+
+.IE00Tb {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.IE00Tb {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid;
+    color: #fff;
+}
+
+.IE00Tb, .MUdC51 .bgVGtR, .DZjdut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+    min-height: 35px;
+    padding: 0 10px;
+}
+
+.DZjdut {
+    width: 100%;
+}
+
+.MUdC51 .bgVGtR, .DZjdut {
+    background-color: #fad318;
+    color: #000;
+}
+
+.VR8IOr .si6gif {
+    position: absolute;
+    width: 55px;
+    top: 0;
+    right: 0;
+}
+
+.si6gif {
+    width: 55px;
+    height: 55px;
+    z-index: 2;
+}
+
+.W2PhV9 {
+    cursor: pointer;
+    background: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    line-height: 1;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.M4h6iN {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 10px;
+    transition: all .1s ease-out;
+    align-self: stretch;
+}
+
+.QVYEXB {
+    margin: 0 -10px;
+}
