@@ -1,0 +1,35 @@
+
+/* Div principal */
+
+.dMZWSu.QGxW_F {
+    max-width: calc(1200px + 40px);
+    padding: 0 20px;
+}
+
+.dMZWSu {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Primer Div interno de principal*/
+
+.dYxtMC {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+/* Segundo Div interno de principal*/
+
+@media (min-width: 871px) {
+    .Gn2rwQ {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 220px calc(100% - 240px);
+    }
+}
+
+.Gn2rwQ {
+    margin-bottom: 40px;
+}
