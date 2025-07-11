@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../components/navbar/navbar.component';
-import { FooterViewComponent } from '../components/footer-view/footer-view.component';
+import { NavbarComponent } from '../shared/components/navbar/navbar.component';
+import { FooterViewComponent } from '../shared/components/footer-view/footer-view.component';
 import { FilterSidebarComponent } from './components/filter-sidebar/filter-sidebar.component';
 
 @Component({

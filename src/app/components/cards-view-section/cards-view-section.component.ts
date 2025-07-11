@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardComponent } from "../card/card.component";
+import { CardComponent } from '../../shared/components/card/card.component';
 import { ScrollBarComponent } from '../scroll-bar/scroll-bar.component';
 
 @Component({
