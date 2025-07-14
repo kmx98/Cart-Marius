@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../../shared/components/card/card.component';
-import { ScrollBarComponent } from '../../../components/scroll-bar/scroll-bar.component';
+import { ScrollBarComponent } from '../../../home/components/scroll-bar/scroll-bar.component';
+// import { ScrollBarComponent } from '../../../components/scroll-bar/scroll-bar.component';
 
 @Component({
   selector: 'app-cards-view-section',
