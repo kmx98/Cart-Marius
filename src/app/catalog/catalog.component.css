@@ -1,24 +1,24 @@
 
-/* Div principal */
-
-.dMZWSu.QGxW_F {
-    max-width: calc(1200px + 40px);
-    padding: 0 20px;
-}
-
-.dMZWSu {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /* Primer Div interno de principal*/
 
-.dYxtMC {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-}
+        .dYxtMC {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            max-width: 1450px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
+        .dYxtMC h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            /* color: #333; */
+        }
 
 /* Segundo Div interno de principal*/
 
@@ -35,28 +35,41 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1450px;
+    margin: 0 auto 40px auto;
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 30px;
 }
 
-.content-area {
-    background: white;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    min-height: 500px;
-}
+       /* Área de contenido con grid normal */
+        .content-area {
+            border-radius: 12px;
+            padding: 30px;
+            
+            /* Grid layout para las cards */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+            gap: 20px;
+            
+            /* La altura se ajusta automáticamente al contenido */
+            min-height: 500px;
+        }
 
-.content-title {
-    color: #333;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
+        /* Responsive para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .content-area {
+                grid-template-columns: repeat(2, 1fr); /* 2 columnas en mobile */
+            }
+        }
 
-.content-text {
-    color: #666;
-    line-height: 1.6;
-}
+        @media (max-width: 480px) {
+            .content-area {
+                grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+            }
+        }
