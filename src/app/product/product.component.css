@@ -1,0 +1,251 @@
+
+@media (min-width: 801px) {
+    .YGeqb0.ECidMT {
+        padding-top: 165px;
+    }
+}
+
+.YGeqb0.ECidMT {
+    padding-top: 20px;
+}
+
+@media (min-width: 801px) {
+    .YGeqb0 {
+        margin-top: -145px;
+        padding-top: 145px;
+    }
+}
+
+.YGeqb0 {
+    flex: 1;
+    min-height: min(100vh, 980px);
+}
+
+main {
+    display: block;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.dMZWSu.QGxW_F {
+    max-width: calc(1200px + 40px);
+    padding: 0 20px;
+}
+
+.dMZWSu {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.xrzbGC {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+@media (min-width: 1281px) {
+    .O8Oi6F {
+        width: 1600px;
+        max-width: calc(100vw - 80px);
+    }
+}
+
+.O8Oi6F {
+    padding-bottom: 100px;
+}
+
+@media (min-width: 1100px) {
+    .vOtMzl {
+        grid-template-areas:
+        "img ttl trp"
+        "img ttl cvr"
+        "img tgs cvr"
+        "img msc cvr"
+        "opts opts cvr"
+        "sld sld cvr"
+        "dtl dtl cvr"
+        "smlr smlr cvr";
+        grid-template-columns: 200px 1fr 350px;
+    }
+}
+
+@media (min-width: 931px) {
+    .vOtMzl {
+        grid-column-gap: 30px;
+        grid-template-areas:
+        "img ttl trp"
+        "img ttl cvr"
+        "img tgs cvr"
+        "msc msc cvr"
+        "opts opts cvr"
+        "sld sld cvr"
+        "dtl dtl cvr"
+        "smlr smlr cvr";
+        grid-template-columns: 150px 1fr 350px;
+    }
+}
+
+.vOtMzl {
+    display: grid;
+    grid-template-areas:
+        "trp trp"
+        "img ttl"
+        "tgs tgs"
+        "cvr cvr"
+        "msc msc"
+        "opts opts"
+        "sld sld"
+        "dtl dtl"
+        "smlr smlr";
+    grid-template-columns: 72px 1fr;
+    grid-column-gap: 15px;
+}
+
+.vOtMzl .OlZQ6u {
+    grid-area: img;
+    margin-bottom: 30px;
+}
+
+.vOtMzl .bTeeEr {
+    grid-area: ttl;
+    margin-bottom: 15px;
+}
+
+.WYO9Uq {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+
+.HJs7LH {
+    font-weight: 800;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #23c299;
+    align-self: start;
+    border: 1px solid #23c299;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 0 12px;
+    margin-bottom: 10px;
+}
+
+.iS82Wi {
+    margin: 0 0 20px;
+}
+
+.iS82Wi .C68dpx {
+    white-space: wrap;
+    display: inline;
+}
+
+@media (min-width: 600px) {
+    .C68dpx {
+        font-size: 2.6rem;
+    }
+}
+
+.C68dpx {
+    margin: 0 0 20px;
+    font-size: 1.6rem;
+}
+
+.dPzCej {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.KNCVaE {
+    font-size: 1.2rem;
+}
+
+.jTNWAp {
+    background: none;
+    position: relative;
+    font-size: 1rem;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+input, select, textarea, button {
+    font-family: inherit;
+}
+
+.YEyK6U {
+    width: 4.8em;
+}
+
+.YEyK6U .P14KYS {
+    color: rgba(0, 0, 0, .1);
+    transition-property: color;
+    transition-duration: 250ms;
+}
+
+.YEyK6U .xNZEk7 {
+    color: rgba(255, 255, 255, .1);
+    transition-property: color;
+    transition-duration: 250ms;
+}
+
+.YEyK6U .dZR92M {
+    color: rgba(0, 0, 0, 0);
+    transition-property: color;
+    transition-duration: 250ms;
+}
+
+.YEyK6U .CV7zyy {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .7);
+    transition-property: color;
+    transition-duration: 250ms;
+}
+
+.q01xsa {
+    display: flex;
+    margin: 5px 65px 20px 0;
+}
+
+.sZkTDP {
+    margin-right: 20px;
+    align-self: flex-start;
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+.WQX7fj {
+    font-size: 1.6rem;
+}
+
+.link {
+    font: inherit;
+    color: #fad318;
+    background: none;
+    transition: color 150ms ease-in-out;
+}
+
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.cqh4He {
+    display: inline-block;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+}
+
