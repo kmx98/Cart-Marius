@@ -16,7 +16,7 @@ export interface Product {
   date: string | null;
   description: string | null;
   urlImg: string;
-  price: number | null;
+  price: number;
   genres: string[] | null; // Tambien puede no tener generos NULL
   requirements: {
     requirementId: number;
@@ -39,15 +39,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  getProduct(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiUrl);
-  }
-
   getGameById(id: number): Observable<Product> {
     return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 
-  // crearProducto(producto: Product): Observable<Product> {
-  //   return this.http.post<Product>(this.apiUrl, producto);
-  // }
 }
